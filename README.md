@@ -20,13 +20,13 @@ Develop and evaluate predictive models that capture relationships between market
 
 The analysis includes:
 
-Logistic Regression as a baseline model
+- Logistic Regression as a baseline model
 
-GRU-based neural networks for sequential customer journey modeling
+- GRU-based neural networks for sequential customer journey modeling
 
-Hyperparameter tuning and model comparison
+- Hyperparameter tuning and model comparison
 
-Evaluation using classification metrics, including PR-AUC and ROC-AUC
+- Evaluation using classification metrics, including PR-AUC and ROC-AUC
 
 ### 2. Marketing Attribution
 
@@ -34,33 +34,33 @@ Investigate how different attribution methods distribute conversion credits acro
 
 The analysis includes:
 
-First-Touch Attribution
+- First-Touch Attribution
 
-Last-Touch Attribution
+- Last-Touch Attribution
 
-Linear Attribution
+- Linear Attribution
 
-Shapley Value-based Attribution using a trained Dual-Attention GRU (DAGRU) model
+- Shapley Value-based Attribution using a trained Dual-Attention GRU (DAGRU) model
 
-Comparison of attribution results across methods
+- Comparison of attribution results across methods
 
-Methodology
+## Methodology
 
 The project follows a structured analytical workflow:
 
-Data Preparation: Preprocessing and encoding customer journey sequences and touchpoint features.
+1. Data Preparation: Preprocessing and encoding customer journey sequences and touchpoint features.
 
-Exploratory Data Analysis: Examining conversion patterns and customer journey characteristics.
+2. Exploratory Data Analysis: Examining conversion patterns and customer journey characteristics.
 
-Baseline Modeling: Establishing a reference using Logistic Regression.
+3. Baseline Modeling: Establishing a reference using Logistic Regression.
 
-Deep Learning: Developing GRU-based models to capture sequential dependencies.
+4. Deep Learning: Developing GRU-based models to capture sequential dependencies.
 
-Model Optimization: Tuning model configurations and evaluating alternative architectures.
+5. Model Optimization: Tuning model configurations and evaluating alternative architectures.
 
-Model Evaluation: Comparing predictive performance across models.
+6. Model Evaluation: Comparing predictive performance across models.
 
-Shapley Attribution: Estimating model-based touchpoint contributions and aggregating them by marketing channel.
+7. Shapley Attribution: Estimating model-based touchpoint contributions and aggregating them by marketing channel.
 
 ## Tech Stack
 - Python
