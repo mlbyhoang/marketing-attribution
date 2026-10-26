@@ -34,11 +34,7 @@ Investigate how different attribution methods distribute conversion credits acro
 
 The analysis includes:
 
-- First-Touch Attribution
-
 - Last-Touch Attribution
-
-- Linear Attribution
 
 - Shapley Value-based Attribution using a trained Dual-Attention GRU (DAGRU) model
 
