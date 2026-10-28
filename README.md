@@ -12,6 +12,8 @@ The analysis focuses on two main objectives:
 
 The project combines traditional machine learning, recurrent neural networks, and model-based attribution techniques to analyze sequential customer interactions.
 
+A key focus is the development and comparison of GRU-based neural network architectures, followed by Shapley value-based attribution using a trained Dual-Attention GRU (DAGRU) model.
+
 ## Objectives
 
 ### 1. Conversion Prediction
@@ -24,9 +26,11 @@ The analysis includes:
 
 - GRU-based neural networks for sequential customer journey modeling
 
-- Hyperparameter tuning and model comparison
+- Investigation of sampling strategies and class imbalance handling
 
-- Evaluation using classification metrics, including PR-AUC and ROC-AUC
+- Hyperparameter optimization and comparison of neural network architectures
+
+- Evaluation using classification metrics, including PR-AUC, ROC-AUC and Log Loss
 
 ### 2. Marketing Attribution
 
@@ -34,43 +38,55 @@ Investigate how different attribution methods distribute conversion credits acro
 
 The analysis includes:
 
-- Last-Touch Attribution
+- Last-Touch Attribution as a rule-based reference
 
 - Shapley Value-based Attribution using a trained Dual-Attention GRU (DAGRU) model
 
 - Comparison of attribution results across methods
 
-## Methodology
+The objective is to explore how model-based attribution differs from conventional rule-based approaches.
 
-The project follows a structured analytical workflow:
+## Modeling Approach
 
-1. Data Preparation: Preprocessing and encoding customer journey sequences and touchpoint features.
+The project combines traditional machine learning and deep learning to investigate conversion prediction and marketing attribution.
 
-2. Exploratory Data Analysis: Examining conversion patterns and customer journey characteristics.
+- **Baseline Modeling**: Logistic Regression provides a reference for evaluating the performance of more complex neural network architectures.
 
-3. Baseline Modeling: Establishing a reference using Logistic Regression.
+- **Sequential Modeling**: GRU-based neural networks are used to capture dependencies between marketing touchpoints within customer journeys.
 
-4. Deep Learning: Developing GRU-based models to capture sequential dependencies.
+- **Class Imbalance**: Sampling strategies are investigated using a GRU-based proxy model to address the imbalance between converting and non-converting journeys.
 
-5. Model Optimization: Tuning model configurations and evaluating alternative architectures.
+- **Model Optimization**: Different GRU architectures are optimized and compared to evaluate their predictive performance.
 
-6. Model Evaluation: Comparing predictive performance across models.
-
-7. Shapley Attribution: Estimating model-based touchpoint contributions and aggregating them by marketing channel.
-
-## Tech Stack
-- Python
-- Pandas
-- NumPy
-- scikit-learn
-- Jupyter Lab
-- matplotlib
-- searborn
-- pytorch
+- **Model-Based Attribution**: Shapley values are used to estimate touchpoint contributions based on predictions from a trained Dual-Attention GRU model.
 
 ## Project Structure
 
-The notebooks/ directory contains the individual stages of the analysis, from data preparation and exploratory analysis to model development, evaluation, and attribution.
+The `notebooks/` directory contains the complete analytical workflow, organized into five stages:
+
+| Notebooks | Description |
+|---|---|
+| `01–02` | Data preparation and exploratory data analysis |
+| `03` | Logistic Regression baseline for conversion prediction |
+| `04` | Sampling strategy evaluation using a GRU proxy model |
+| `05–07` | GRU architecture development and hyperparameter tuning |
+| `08–10` | Training of three GRU-based model architectures |
+| `11` | Model evaluation and comparison using PR-AUC, ROC-AUC, and Log Loss |
+| `12` | Shapley value-based attribution and marketing channel analysis |
+
+Each notebook documents a specific stage of the modeling and attribution process.
+   
+## Tech Stack
+- Python
+- pandas
+- NumPy
+- scikit-learn
+- Keras
+- Matplotlib
+- Seaborn
+- PyTorch
+- Google Colab
+
 
 ## Limitations
 
