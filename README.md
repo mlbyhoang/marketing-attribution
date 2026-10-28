@@ -1,4 +1,4 @@
-# Multi-touch Attribution
+# Marketing Attribution
 
 ## Overview
 
